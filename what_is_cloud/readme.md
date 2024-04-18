@@ -49,3 +49,4 @@ My understanding of market share is how much cloud service in comparison with ot
 - **AWS** has significantly more services, and more features within those services, than any other cloud provider–from infrastructure technologies like compute, storage, and databases–to emerging technologies, such as machine learning and artificial intelligence, data lakes and analytics, and Internet of Things
 - **Azure** maximizes performance and value for migrated SQL Server workloads when compared to AWS.
 - **Google Cloud's** strengths lie in its data analytics and machine learning capabilities. If you're big on AI and data crunching, Google Cloud's got a strong game. It also boasts a more modern and intuitive user interface, making it easier to navigate.
+** **
