@@ -40,7 +40,11 @@ With SaaS, providers host, manage and offer the entire infrastructure, as well a
 3. Migration
 4. Minimal Support
 ## Understanding OpEx and CapEx
-Capital expenditures (CapEx) are a company's major, long-term expenses while operating expenses are a company's day-to-day expenses.
-## Marketshare
-## The big 3
-## 4 DevOp cloud pillars
+Capital expenditures (CapEx) are a company's major, long-term expenses while operating expenses are a company's day-to-day expenses. CapEx are funds used by a company to acquire, upgrade, and maintain physical assets such as property, plants, buildings, technology, or equipment. OpEx is spending money on services or products now and being billed for them now. There's no upfront cost: You pay for a service or product as you use it.
+## Market share
+![img_5.png](images%2Fimg_5.png)<br>
+My understanding of market share is how much cloud service in comparison with other companies, and as seen from the diagram above Amazon Azure and Google cloud lead the market having the most cloud service amongst the rest.
+### The big 3
+- **AWS** has significantly more services, and more features within those services, than any other cloud provider–from infrastructure technologies like compute, storage, and databases–to emerging technologies, such as machine learning and artificial intelligence, data lakes and analytics, and Internet of Things
+- **Azure** maximizes performance and value for migrated SQL Server workloads when compared to AWS.
+- **Google Cloud's** strengths lie in its data analytics and machine learning capabilities. If you're big on AI and data crunching, Google Cloud's got a strong game. It also boasts a more modern and intuitive user interface, making it easier to navigate.
