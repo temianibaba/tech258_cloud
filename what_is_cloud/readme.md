@@ -9,6 +9,38 @@ Being on premises refers to a software being hosted on your own/rented hardware.
 ## 4 Deployment methods
 ### Private
 ![img.png](images%2Fimg.png)<br>
-One to one environment for a single user, hardware is not shared with anyone else but you! This deployment method allows you to access software within an outlined border, most private clouds are secured with a firewall and kept under supervision. Has the highest flexibility of control out of the 4 deployment methods, however is less scalable, and costs more.
+One to one environment for a single user, hardware is not shared with anyone else but you! This deployment method allows you to access software within an outlined border, most private clouds are secured with a firewall and kept under supervision. Has the highest flexibility of control out of the 4 deployment methods, however is less scalable, and costs more. Amazon Virtual Private Cloud is an example of a private cloud model.
 ### Public
 ![img_1.png](images%2Fimg_1.png)<br>
+A public allows anyone and everyone to access your software. The cloud service is provided over the internet, and it is not owned by the consumer. An example of this is the Google App Engine. Public clouds are one of the cheapest model deployments, and they don't need as much supervision when compared to private clouds. On the other hand they are less secure and aren't as customisable when compared to other cloud deployment models.
+### Hybrid
+![img_2.png](images%2Fimg_2.png)<br>
+This deployment method is a mixture between private and public cloud deployments with some software owned by the organisation. Hybrid is a solution to privates cost and public security whilst maintaining the flexibility and control from a private cloud. However, hybrid clouds can be harder to manage and is still subject to the public clouds speeds.
+### Multi-cloud
+![img_3.png](images%2Fimg_3.png)<br>
+Similar to the hybrid cloud deployment approach multi cloud combines multiple cloud providers however instead of merging the two, it utilizes multiple public clouds. By using multiple public clouds it increases the overall reliability of the software, allowing backups when one public cloud isn't functioning as expected. This in turn, reduces latency and allows a higher availability of service, but makes the software many times more complex which allow loopholes for security breeches.
+## Types of cloud services
+There are three main types of cloud computing services.<br>
+![img_4.png](images%2Fimg_4.png)
+### IaaS (Infrastructure as a Service)
+It's a form of cloud computing that provides virtualized computing resources over the internet. The cloud provider manages IT infrastructures such as storage, server and networking resources, and delivers them to  organisations through virtual machines accessible through the internet. IaaS can have many benefits for organisations, such as potentially making workloads faster, easier, more flexible and more cost-efficient. Rackspace Managed Cloud is an example of IaaS
+### Paas (Platforms-as-a-Service)
+Users rent everything they need to build an application, relying on a cloud provider for development tools, infrastructure, and operating systems. PaaS builds on the IaaS model because, as well as the underlying infrastructure components, providers host, managing and offering operating systems, middleware and other runtimes for cloud users. While PaaS simplifies workload deployment, it also restricts a business's flexibility to create the environment that it wants.
+### SaaS (Software-as-a-Service)
+With SaaS, providers host, manage and offer the entire infrastructure, as well as applications, for users. SaaS users do not need to install anything; they simply log in and use the provider's application, which runs on the provider's infrastructure. Users have some ability to configure the way that the application works and which users are authorized to use it, but the SaaS provider is responsible for everything else.
+## Some Pros and Cons of cloud and moving to cloud
+#### Pros
+1. Cost Saving
+2. Data Redundancy and Replication
+3. Automation
+4. Usability or Accessibility
+#### Cons
+1. Vulnerability
+2. Internet Dependency
+3. Migration
+4. Minimal Support
+## Understanding OpEx and CapEx
+Capital expenditures (CapEx) are a company's major, long-term expenses while operating expenses are a company's day-to-day expenses.
+## Marketshare
+## The big 3
+## 4 DevOp cloud pillars
