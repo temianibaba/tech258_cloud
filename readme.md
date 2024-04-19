@@ -79,12 +79,12 @@ sudo apt upgrade -y
 sudo apt  install nginx -y
 systemctl status nginx
 ```
-`chmod 400`: change mode
-`sudo`: this is a command allows you to run programs with the security privileges.
-`apt`: You can use the apt command to install, delete or remove apps, keep Ubuntu/Debian server up to date with security patches and more.
-`update`: this command checks the system has all the latest packages available. 
-`upgrade`: this command the makes all the packages installed are at their latest version. 
-`-y`: this command tells the system to choose yes for any questions we may be asked during the running of the process, using this command allows you to automate the process.
+`chmod 400`: change mode<br>
+`sudo`: this is a command allows you to run programs with the security privileges.<br>
+`apt`: You can use the apt command to install, delete or remove apps, keep Ubuntu/Debian server up to date with security patches and more.<br>
+`update`: this command checks the system has all the latest packages available. <br>
+`upgrade`: this command the makes all the packages installed are at their latest version. <br>
+`-y`: this command tells the system to choose yes for any questions we may be asked during the running of the process, using this command allows you to automate the process.<br>
 ## NGINX
 NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. 
 ## Checks
