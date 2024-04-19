@@ -44,6 +44,7 @@ Bash - born again shell ( is a computer program designed to be run by a Unix she
 `ls` print the list of files<br>
 `ls -a` print the list of all files<br>
 `ll` print list of files with more information<br>
+
 ---
 ## File and Directory Commands 
 `curl` used to transfer data<br>
