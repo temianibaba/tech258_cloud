@@ -59,3 +59,36 @@ sudo apt upgrade -y
 sudo apt  install nginx -y
 systemctl status nginx
 ```
+To access your instance via your browser you would copy your Public IPv4 address into where you type out URLs
+
+** **
+# Explanation
+## Machine images
+A machine image is a Compute Engine resource that stores all the configuration, metadata, permissions, and data from multiple disks of a virtual machine (VM) instance. You can use a machine image in many system maintenance, backup and recovery, and instance cloning scenarios. The machine image (in Amazon, the AMI) is a raw copy of your operating system and core software for a particular environment on a specific platform. When you start a virtual server, it copies its operating environment from the machine image and boots up.
+## Security groups
+A security group controls the traffic that is allowed to reach and leave the resources that it is associated with. For example, after you associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.
+**Ports** are door numbers inside your instances IP, if your IP is like an address the port is the door number and when attached to a security rule you are allowing traffic through that door. For example the port number for SSH is 22, once this rule is allowed anyone with the corresponding SSH key has access to your instance. 
+## SSH keys
+SSH keys encrypt data transfer and only allow users with the corresponding key to decrypt the data received or sent. In this case we have access to the shell, the instance, because we have set up the SSH key pair.
+## Command list
+```commandline
+chmod 400 "tech258.pem"
+ssh -i "tech258.pem" ubuntu@ec2-18-203-93-103.eu-west-1.compute.amazonaws.com
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt  install nginx -y
+systemctl status nginx
+```
+`chmod 400`: change mode
+`sudo`: this is a command allows you to run programs with the security privileges.
+`apt`: You can use the apt command to install, delete or remove apps, keep Ubuntu/Debian server up to date with security patches and more.
+`update`: this command checks the system has all the latest packages available. 
+`upgrade`: this command the makes all the packages installed are at their latest version. 
+`-y`: this command tells the system to choose yes for any questions we may be asked during the running of the process, using this command allows you to automate the process.
+## NGINX
+NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. 
+## Checks
+There are two ways to check:<br>
+1. Use `systemctl status nginx`
+![img_21.png](images%2Fimg_21.png)
+2. Enter your IP address into your web browser
