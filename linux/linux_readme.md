@@ -122,6 +122,8 @@ note: two ways to reference permission long form (letters) and short form(number
 `chmod +x` provision.sh changes permission on file to allow execute (sometimes you need to sudo before this command)<br>
 note: you can use a https://chmod-calculator.com to find the shortform read +4 write +2 execute +1<br>
 
+
+
 `./provision.sh to run script`<br>
 note: for the following commands use sudo as a prefix<br>
 `systemctl status nginx` to see if it is running<br>
@@ -130,6 +132,8 @@ note: for the following commands use sudo as a prefix<br>
 `systemctl restart nginx` to restart nginx <br>
 note: we restart instead of start because when you change the config, the changes will not take effect with start, but they will take effect with restart<br>
 `sudo systemctl enable nginx` to enable nginx<br>
+
+
 ---
 ## Environment variables
 `printenv`<br>
