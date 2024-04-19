@@ -76,10 +76,12 @@ to check out the menu<br>
 and catch up with his old friend the colonel<br>
 To save in nano: Crtl+X Y Enter<br>
 
+
 Use a command to print the top 2 lines of chicken-joke.txt to the screen (`head -n 2 chicken-joke.txt`)<br>
 Use a command to print the bottom 2 lines of chicken-joke.txt to the screen (`tail -n 2 chicken-joke.txt`)<br>
 Use a command to number the lines of chicken-joke.txt when it output the file to the screen (`nl chicken-joke.txt`) (`cat -n chicken-joke.txt`)<br>
 Use a command only print to the screen the lines of chicken-joke.txt which contain the keyword chicken (`grep "chicken" chicken-joke.txt`)<br>
+
 ---
 ## Package Commands
 `sudo apt install` to install a new package<br>
@@ -96,6 +98,8 @@ Windows home directory - /c/Users/username<br>
 note: there is nothing before this directory, it is NOT a user! Often times there is a root user (superuser)<br>
 `sudo su` use to gain permission that the superuser gets<br>
 
+
+
 (Made a directory called funny jokes inside of funny stuff using mkdir and cd)
 `mv chicken-joke.txt funny_stuff/`<br>
 `mv funny_stuff/chicken-joke.txt .`<br>
@@ -105,6 +109,8 @@ note: . move to current folder, be careful not to put / infront as it refers to 
 note: first argument refers to file you want to modify second argument is the change you want to make<br>
 `mv bad_joke.txt ..` moves bad_joke.txt to its parent directory<br>
 `rm - r funny_stuff` removes the funny_stuff directory and its contents<br>
+
+
 ---
 ## Scripting
 `nano provision.sh` - set up a server so it is ready to go<br>
