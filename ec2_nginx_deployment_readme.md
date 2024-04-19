@@ -66,7 +66,7 @@ To access your instance via your browser you would copy your Public IPv4 address
 ## Machine images
 A machine image is a Compute Engine resource that stores all the configuration, metadata, permissions, and data from multiple disks of a virtual machine (VM) instance. You can use a machine image in many system maintenance, backup and recovery, and instance cloning scenarios. The machine image (in Amazon, the AMI) is a raw copy of your operating system and core software for a particular environment on a specific platform. When you start a virtual server, it copies its operating environment from the machine image and boots up.
 ## Security groups
-A security group controls the traffic that is allowed to reach and leave the resources that it is associated with. For example, after you associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.
+A security group controls the traffic that is allowed to reach and leave the instance that it is associated with. It is like a firewall, it's the most basic form of security group. For example, after you associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.
 **Ports** are door numbers inside your instances IP, if your IP is like an address the port is the door number and when attached to a security rule you are allowing traffic through that door. For example the port number for SSH is 22, once this rule is allowed anyone with the corresponding SSH key has access to your instance. 
 ## SSH keys
 SSH keys encrypt data transfer and only allow users with the corresponding key to decrypt the data received or sent. In this case we have access to the shell, the instance, because we have set up the SSH key pair.
@@ -80,7 +80,7 @@ sudo apt  install nginx -y
 systemctl status nginx
 ```
 `chmod 400`: change mode<br>
-`sudo`: this is a command allows you to run programs with the security privileges.<br>
+`sudo`: 'superuser do' this is a command allows you to run programs with the security privileges.<br>
 `apt`: You can use the apt command to install, delete or remove apps, keep Ubuntu/Debian server up to date with security patches and more.<br>
 `update`: this command checks the system has all the latest packages available. <br>
 `upgrade`: this command the makes all the packages installed are at their latest version. <br>
