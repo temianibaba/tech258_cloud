@@ -133,6 +133,28 @@ note: for the following commands use sudo as a prefix<br>
 note: we restart instead of start because when you change the config, the changes will not take effect with start, but they will take effect with restart<br>
 `sudo systemctl enable nginx` to enable nginx<br>
 
+## Final Script
+`#!/bin/bash`
+### echo update
+`sudo apt update -y`
+ echo done!
+
+### echo upgrade
+`sudo apt upgrade -y`
+ echo done! 
+
+### echo install nginx
+`sudo apt install nginx -y`
+ echo done!
+
+### echo restart nginx
+`sudo systemctl restart nginx`
+ echo done!
+
+### echo enable nginx
+`sudo systemctl enable nginx`
+echo done!
+
 
 ---
 ## Environment variables

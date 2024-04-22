@@ -83,7 +83,7 @@ systemctl status nginx
 `sudo`: 'superuser do' this is a command allows you to run programs with the security privileges.<br>
 `apt`: You can use the apt command to install, delete or remove apps, keep Ubuntu/Debian server up to date with security patches and more.<br>
 `update`: this command checks the system has all the latest packages available. <br>
-`upgrade`: this command the makes all the packages installed are at their latest version. <br>
+`upgrade`: this command the makes all the packages installed are at their latest version. Newer versions may not be compatible with older versions breaking the software. <br>
 `-y`: this command tells the system to choose yes for any questions we may be asked during the running of the process, using this command allows you to automate the process.<br>
 ## NGINX
 NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. 
