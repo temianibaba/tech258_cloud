@@ -54,6 +54,14 @@ git clone https://github.com/temianibaba/tech258-sparta-test-app.git
 cd app/
 
 # run app
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+node -v # to check version
+
+npm install
+npm start or node app.js
+
 npm install
 npm start or node app.js
 ```
