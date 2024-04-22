@@ -124,7 +124,7 @@ note: you can use a https://chmod-calculator.com to find the shortform read +4 w
 
 
 
-`./provision.sh to run script`<br>
+`./provision.sh` to run script<br>
 note: for the following commands use sudo as a prefix<br>
 `systemctl status nginx` to see if it is running<br>
 `systemctl stop nginx` to stop nginx running<br>
@@ -133,28 +133,26 @@ note: for the following commands use sudo as a prefix<br>
 note: we restart instead of start because when you change the config, the changes will not take effect with start, but they will take effect with restart<br>
 `sudo systemctl enable nginx` to enable nginx<br>
 
-## Final Script
-`#!/bin/bash`
-### echo update
-`sudo apt update -y`
- echo done!
+```
+Example Script
+#!/bin/bash
+#  update
+sudo apt update -y
 
-### echo upgrade
-`sudo apt upgrade -y`
- echo done! 
+# upgrade
+sudo apt upgrade -y
+ 
+# install nginx
+sudo apt install nginx -y
 
-### echo install nginx
-`sudo apt install nginx -y`
- echo done!
 
-### echo restart nginx
-`sudo systemctl restart nginx`
- echo done!
+# echo restart nginx
+sudo systemctl restart nginx
 
-### echo enable nginx
-`sudo systemctl enable nginx`
-echo done!
 
+# echo enable nginx
+sudo systemctl enable nginx
+```
 
 ---
 ## Environment variables
@@ -167,3 +165,36 @@ note: you can make normal variables use (variable name) = (variable data you wan
 note: this will be lost if you log out, to make it permanent you have to add it to a file<br>
 `nano .bashrc` to access hidden file so we can always have our variable<br>
 `export MYNAME=temi_is_persistent` add this to the end of the file<br>
+
+Naming convention Group, name, what it is for, sg, what you are allowing
+tech258_muyis_sparta_test_app_sg_allow_SSH_HTTP_3000
+
+To access ssh folder from anywhere
+`ssh -i "~(path to ssh private key)tech258.pem" ubuntu@ec2-54-229-193-9.eu-west-1.compute.amazonaws.com`
+
+## Process commnands
+Bash is always running to interpret our commands
+To see all processes `ps -e`
+
+`ps aux` snapshot of all the processes
+
+`top` to get live feedback of processes runinng
+- Order by memory shift M
+- Order by newest process shift N
+- Order by process usage shift P
+
+## Parent and Child processes
+Each has process ID<br>
+A parent can create child processes<br>
+Taking out a parent process with too much force can lead to child processes being left around in memory without anything contolling them, a zombie process "taking up memory without doing anything".<br>
+Parent processes will recreate child processes if you only force kill the child<br>
+If you want to kill child processes get parent process to do it
+
+To run in background use `&` after command<br>
+`jobs` shows commands that are running<br>
+`jobs -l` shows process ID
+
+## Some kill signals
+- `1` Gentle
+- `15` Default - shouldn't create zombie processes
+- `9` Brute force - may create parent processes
