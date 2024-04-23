@@ -157,12 +157,12 @@ sudo systemctl enable nginx
 ---
 ## Environment variables
 `printenv`<br>
-note: variable is a store of data, env variable is set at an os level, it can be accessed anywhere in the system without the path being referenced<br>
+**note:** variable is a store of data, env variable is set at an os level, it can be accessed anywhere in the system without the path being referenced<br>
 `printenv USER` print the user env variable<br>
-note: you can make normal variables use (variable name) = (variable data you want to store)<br>
+**note:** you can make normal variables use (variable name) = (variable data you want to store)<br>
 `echo (name of variable)` print the normal variable<br>
 `export` use to make variable an env variable<br>
-note: this will be lost if you log out, to make it permanent you have to add it to a file<br>
+**note:** this will be lost if you log out, to make it permanent you have to add it to a file<br>
 `nano .bashrc` to access hidden file so we can always have our variable<br>
 `export MYNAME=temi_is_persistent` add this to the end of the file<br>
 

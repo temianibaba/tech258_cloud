@@ -15,58 +15,73 @@ enable nginx when you start your instance nginx will start too, to test new scri
 
 echo update
 sudo apt update -y
- echo done!
+echo done!
 
 echo upgrade
 # fix this command! asks for user input
 # pending kernek upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-sudo apt upgrade -y
- echo done! 
+echo done! 
 
 echo install nginx
 # fix this command! asks for user input
 # pending kernek upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt install nginx -y
-sudo apt install nginx -y
- echo done!
+echo done!
 
 # configure reverse proxy
 
 # changing config file
 
 echo restart nginx
-sudo systemctl restart nginx
- echo done!
+# activates any changes made during configuration
+sudo DEBIAN_FRONTEND=noninteractive systemctl restart nginx
+echo done!
 
 echo enable nginx
-sudo systemctl enable nginx
+# allow any user logging in to use nginx
+sudo DEBIAN_FRONTEND=noninteractive systemctl enable nginx
 echo done!
 
 # get the app folder with app code inside
-scp -i ~/.ssh/tech258.pem -r ~/app-code/sparta_test_app ubuntu@ec2-63-35-215-215.eu-west-1.compute.amazonaws.com:~
+# scp -i ~/.ssh/tech258.pem -r ~/app-code/sparta_test_app ubuntu@ec2-63-35-215-215.eu-west-1.compute.amazonaws.com:~
 
-or
+# or
 
-git clone https://github.com/temianibaba/tech258-sparta-test-app.git
+echo get app folder
+sudo DEBIAN_FRONTEND=noninteractive git clone https://github.com/temianibaba/tech258-sparta-test-app.git
+echo done!
 
 # cd app folder
-cd app/
+echo go to app folder
+cd ~/tech258-sparta-test-app/app/
+echo done!
 
 # run app
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+echo install node js
+sudo DEBIAN_FRONTEND=noninteractive curl -fsSL https://deb.nodesource.com/setup_20.x | sudo DEBIAN_FRONTEND=noninteractive -E bash - &&\
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 
 node -v # to check version
+echo done!
 
-npm install
-npm start or node app.js
-
-npm install
-npm start or node app.js
+echo install app 
+sudo npm install
+echo done!
 ```
+
 **note:** to check app is running use your IP address with **:3000**
 
-### Running app in the background
-`` nohup node app.js &
-``
+### Different ways to run apps 
+1. ``sudo npm start or node app.js``
+2. ``nohup node app.js &``
+3. ``pm2``
+```bash
+echo stop all processes
+sudo pm2 stop all
+echo done!
+
+echo start app in background
+pm2 start app.js (name process)
+echo done!
