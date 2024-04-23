@@ -1,4 +1,23 @@
 # Cloud Computing
+- [Cloud Computing](#cloud-computing)
+  - [What is cloud computing](#what-is-cloud-computing)
+  - [How do we know if something is in the cloud?](#how-do-we-know-if-something-is-in-the-cloud)
+  - [4 Deployment methods](#4-deployment-methods)
+    - [Private](#private)
+    - [Public](#public)
+    - [Hybrid](#hybrid)
+    - [Multi-cloud](#multi-cloud)
+  - [Types of cloud services](#types-of-cloud-services)
+    - [IaaS (Infrastructure as a Service)](#iaas-infrastructure-as-a-service)
+    - [Paas (Platforms-as-a-Service)](#paas-platforms-as-a-service)
+    - [SaaS (Software-as-a-Service)](#saas-software-as-a-service)
+  - [Some Pros and Cons of cloud and moving to cloud](#some-pros-and-cons-of-cloud-and-moving-to-cloud)
+      - [Pros](#pros)
+      - [Cons](#cons)
+  - [Understanding OpEx and CapEx](#understanding-opex-and-capex)
+  - [Market share](#market-share)
+    - [The big 3](#the-big-3)
+
 ## What is cloud computing
 Cloud computing is the delivery of IT resources using the internet, instead of using physical data centers, cloud computing allows users to access technology such as computer power, storage and databases whenever wherever you want to.
 

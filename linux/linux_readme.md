@@ -1,4 +1,17 @@
 # Linux 
+
+- [Linux](#linux)
+  - [Why Linux](#why-linux)
+  - [Need to know commands](#need-to-know-commands)
+  - [File and Directory Commands](#file-and-directory-commands)
+  - [Package Commands](#package-commands)
+    - [HOME and ROOT directories(~)](#home-and-root-directories)
+  - [Scripting](#scripting)
+  - [Environment variables](#environment-variables)
+  - [Process commnands](#process-commnands)
+  - [Parent and Child processes](#parent-and-child-processes)
+  - [Some kill signals](#some-kill-signals)
+
 ## Why Linux
 Linux is an OS open source many distributions
 Uses UNIX kernel, it is the core and then the things added on top makes it Linux.
