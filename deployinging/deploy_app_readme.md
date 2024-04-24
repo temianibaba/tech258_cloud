@@ -6,8 +6,8 @@
 Run manually first then paste full script, 
 enable nginx when you start your instance nginx will start too, to test new scripts you have to create a new instance
 
-### Final Script
-```  
+## Script
+```bash  
 #!/bin/bash
 
 # Commands to remove user input
@@ -19,13 +19,13 @@ echo done!
 
 echo upgrade
 # fix this command! asks for user input
-# pending kernek upgrade
+# pending kernel upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-echo done! 
+echo done!
 
 echo install nginx
 # fix this command! asks for user input
-# pending kernek upgrade
+# pending kernel upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt install nginx -y
 echo done!
 
@@ -54,8 +54,12 @@ echo done!
 
 # cd app folder
 echo go to app folder
-cd ~/tech258-sparta-test-app/app/
+cd /home/ubuntu/tech258-sparta-test-app/app
 echo done!
+
+# set DB_HOST env var (npm install is looking for this, it will continue without one and it won't work) also get private IP address
+# export DB_HOST=mongodb://(db private IP):27017/posts
+export DB_HOST=mongodb://172.31.44.25:27017/posts
 
 # run app
 echo install node js
@@ -66,8 +70,18 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 node -v # to check version
 echo done!
 
-echo install app 
-sudo npm install
+
+echo install app
+sudo -E npm install
+echo done!
+
+sudo npm install pm2 -g
+echo stop all processes
+sudo -E pm2 stop all
+echo done!
+
+echo start app in background
+pm2 start app.js # (name process)
 echo done!
 ```
 
@@ -78,10 +92,12 @@ echo done!
 2. ``nohup node app.js &``
 3. ``pm2``
 ```bash
+sudo npm install pm2 -g
 echo stop all processes
 sudo pm2 stop all
 echo done!
 
 echo start app in background
-pm2 start app.js (name process)
+pm2 start app.js # (name process)
 echo done!
+```

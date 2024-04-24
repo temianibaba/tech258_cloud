@@ -208,6 +208,6 @@ To run in background use `&` after command<br>
 `jobs -l` shows process ID
 
 ## Some kill signals
-- `1` Gentle
-- `15` Default - shouldn't create zombie processes
-- `9` Brute force - may create parent processes
+- `-1` Gentle `kill -1 (PID)`
+- `-15` Default - shouldn't create zombie processes `kill -15 (PID)`
+- `-9` Brute force - may create parent processes `kill -9 (PID)`
