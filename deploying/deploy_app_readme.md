@@ -45,7 +45,7 @@ sudo DEBIAN_FRONTEND=noninteractive git clone https://github.com/temianibaba/tec
 echo done!
 
 echo go to app folder
-cd /home/ubuntu/tech258-sparta-test-app/app
+cd ~/tech258-sparta-test-app/app
 echo done!
 
 echo install node js
@@ -57,7 +57,7 @@ node -v # to check version
 echo done!
 
 # export DB_HOST=mongodb://(db private IP):27017/posts
-export DB_HOST=mongodb://:27017/posts
+export DB_HOST=mongodb://10.0.3.4:27017/posts
 printenv DB_HOST
 
 echo install app
@@ -138,7 +138,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install gnupg curl
 # To import the MongoDB public GPG key,
 curl DEBIAN_FRONTEND=noninteractive -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
-   --dearmor --yes
+   --dearmor # --yes
 
 # Create the list file /etc/apt/sources.list.d/mongodb-org-7.0.list for your version of Ubuntu.
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
