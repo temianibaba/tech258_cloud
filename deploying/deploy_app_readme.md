@@ -45,7 +45,8 @@ sudo DEBIAN_FRONTEND=noninteractive git clone https://github.com/temianibaba/tec
 echo done!
 
 echo go to app folder
-cd ~/tech258-sparta-test-app/app
+# cd /home/ubuntu/tech258-sparta-test-app/app # aws
+cd /home/adminuser/tech258-sparta-test-app/app # azure
 echo done!
 
 echo install node js
@@ -57,7 +58,7 @@ node -v # to check version
 echo done!
 
 # export DB_HOST=mongodb://(db private IP):27017/posts
-export DB_HOST=mongodb://10.0.3.4:27017/posts
+export DB_HOST=mongodb://10.0.3.5:27017/posts
 printenv DB_HOST
 
 echo install app
