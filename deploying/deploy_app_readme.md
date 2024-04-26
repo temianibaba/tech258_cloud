@@ -17,6 +17,10 @@ enable nginx when you start your instance nginx will start too, to test new scri
 ```bash  
 #!/bin/bash
 
+# export DB_HOST=mongodb://(db private IP):27017/posts
+export DB_HOST=mongodb://10.0.3.4:27017/posts
+printenv DB_HOST
+
 echo update
 sudo apt update -y
 echo done!
@@ -46,7 +50,7 @@ echo done!
 
 echo go to app folder
 # cd /home/ubuntu/tech258-sparta-test-app/app # aws
-cd /home/adminuser/tech258-sparta-test-app/app # azure
+cd /tech258-sparta-test-app/app # azure
 echo done!
 
 echo install node js
@@ -57,9 +61,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 node -v # to check version
 echo done!
 
-# export DB_HOST=mongodb://(db private IP):27017/posts
-export DB_HOST=mongodb://10.0.3.5:27017/posts
-printenv DB_HOST
+cd /tech258-sparta-test-app/app
 
 echo install app
 sudo -E npm install
@@ -119,7 +121,6 @@ sg- SSH Anywhere, Custom TCP port number:27017 anywhere
 3. Plan commands 
 ## DB Script
 ```bash
-nano provision.db
 #!/bin/bash
 
 echo update
@@ -161,6 +162,7 @@ sudo systemctl restart mongod
 
 # enable mongo db
 sudo systemctl enable mongod
+
 ```
 
 **Configuration of mongo db** config file - 0.0.0.0 (where will mongo db allow connections from), manually ``sudo nano /etc/mongod.conf``  change bindIP from 127.0.0.1 to 0.0.0.0
