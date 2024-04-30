@@ -18,7 +18,7 @@ enable nginx when you start your instance nginx will start too, to test new scri
 #!/bin/bash
 
 # export DB_HOST=mongodb://(db private IP):27017/posts
-export DB_HOST=mongodb://10.0.3.4:27017/posts
+export DB_HOST=mongodb://10.0.3.5:27017/posts
 printenv DB_HOST
 
 echo update
@@ -63,12 +63,15 @@ echo done!
 
 cd /tech258-sparta-test-app/app
 
-echo install app
-sudo -E npm install
+sudo npm install pm2 -g
+echo stop all processes
+sudo pm2 stop all
 echo done!
 
-echo start app
-sudo -E npm start
+echo start app in background
+pm2 start app.js 
+echo done!
+
 ```
 
 **note:** to check app is running use your IP address with **:3000**
@@ -83,7 +86,15 @@ sudo -E npm start
 - **Making an environment variable** using the `npm install` command when installing your app, a `DB_HOST` env variable is needed to link the app to the database, if deploying the app alone (a monolith architecture) then you don't have to worry about this. 
 
 ### Different ways to run apps 
-1. ``sudo npm start or node app.js``
+1. engage the terminal 
+```bash
+echo install app
+sudo -E npm install
+echo done!
+
+echo start app
+sudo -E npm start
+```
 2. ``nohup node app.js &`` - runs app in background
 3. ``pm2`` - runs app in background as parent process
 ```bash
