@@ -69,12 +69,12 @@ sudo pm2 stop all
 echo done!
 
 echo start app in background
-pm2 start app.js 
+sudo pm2 start app.js
 echo done!
 
 ```
 
-**note:** to check app is running use your IP address with **:3000**
+**note:** to check app is running use your IP address with **:3000** without reverse proxy
 ### Explanation
 - **Commands to remove user input** DEBIAN_FRONTEND=noninteractive eg: `sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y` or `sudo sed -i "s/#\$nrconf{kernelhints} = -1;/\$nrconf{kernelhints} = -1;/g" /etc/needrestart/needrestart.conf`
 - **Updates and upgrades** updates the information about available packages without installing, upgrade installs the updates which can lead to incompatability and can damage the instance.
