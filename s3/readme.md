@@ -74,7 +74,7 @@ aws s3 sync s3://tech258-muyis-first-bucket .
 # rm to remove a file
 aws s3 rm s3://tech258-muyis-first-bucket/test.txt
 ```
-:warning: :exclamation_mark: Warning Will delete everything in bucket without confirmation :exclamation_mark: :warning:
+:warning: Warning Will delete everything in bucket without confirmation :warning:
 ```bash
 # remove everything in a bucket DANGEROUS
 aws s3 rm s3://tech258-muyis-first-bucket --recursive
