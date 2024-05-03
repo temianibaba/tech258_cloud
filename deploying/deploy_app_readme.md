@@ -63,13 +63,13 @@ echo done!
 
 cd /tech258-sparta-test-app/app
 
-sudo npm install pm2 -g
+sudo -E npm install pm2 -g
 echo stop all processes
 sudo pm2 stop all
 echo done!
 
 echo start app in background
-sudo pm2 start app.js
+sudo -E pm2 start app.js
 echo done!
 
 ```
