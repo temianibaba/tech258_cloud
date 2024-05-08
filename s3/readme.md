@@ -88,6 +88,7 @@ aws s3 rb s3://tech258-muyis-first-bucket --force
 You can access blobs via AWS console online
 
 ## Scripts
+`pip install boto3`
 ### List all the S3 buckets
 ```python
 import boto3
@@ -102,6 +103,8 @@ for bucket in response['Buckets']:
 import boto3
 s3 = boto3.client('s3')
 bucket_name = 'tech257-muyis-test-boto3'
+# Specify the region where the bucket will be createdregion = 'eu-west-1'
+# Create S3 bucket with the specified regions3.create_bucket(Bucket=bucket_name, CreateBucketConfiguration={'LocationConstraint': region})
 s3.create_bucket(Bucket=bucket_name)
 ```
 
