@@ -6,6 +6,7 @@
     - [Errors](#errors)
 - [Deploying database](#deploying-database)
   - [DB Script](#db-script)
+  - [Unistalling Mongodb](#unistalling-mongodb)
 
 This markdown entails the script to deploying and app that is linked to a specific database.
 
@@ -177,3 +178,10 @@ sudo systemctl enable mongod
 ```
 
 **Configuration of mongo db** config file - 0.0.0.0 (where will mongo db allow connections from), manually ``sudo nano /etc/mongod.conf``  change bindIP from 127.0.0.1 to 0.0.0.0
+
+## Unistalling Mongodb
+```bash
+sudo service mongod stop
+sudo apt-get purge mongodb-org*
+sudo rm -r /var/log/mongodb /var/lib/mongodb
+```
