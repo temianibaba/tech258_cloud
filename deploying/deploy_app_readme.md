@@ -66,7 +66,7 @@ cd /tech258-sparta-test-app/app
 
 sudo -E npm install pm2 -g
 echo stop all processes
-sudo pm2 stop all
+sudo pm2 kill
 echo done!
 
 echo start app in background
