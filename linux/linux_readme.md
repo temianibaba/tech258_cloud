@@ -12,6 +12,7 @@
   - [Parent and Child processes](#parent-and-child-processes)
   - [Some kill signals](#some-kill-signals)
   - [Update vs upgrade](#update-vs-upgrade)
+  - [Copy into intance](#copy-into-intance)
 
 ## Why Linux
 Linux is an OS open source many distributions
@@ -216,3 +217,8 @@ To run in background use `&` after command<br>
 ## Update vs upgrade
 - **Update:** Running apt update doesn't actually install any updates; it simply updates the information about available packages. After running apt update, you can then use apt upgrade to install any available updates.
 - **Upgrade:** It's important to note that apt upgrade only upgrades the packages that are already installed on your system. If there are new packages available that are not currently installed, apt upgrade won't install them. **SOME NEW PACKAGES MAY NOT BE COMPATIBLE WITH YOUR PACKAGES, CAN BREAK INSTANCE**
+
+## Copy into intance
+```bash
+scp -i ~/.ssh/tech258.pem ~/.ssh/tech258.pem ubuntu@<pub_ip_here>:~/.ssh/
+```
