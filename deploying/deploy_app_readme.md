@@ -64,6 +64,8 @@ echo done!
 
 cd /tech258-sparta-test-app/app
 
+# sudo npm install
+# sudo npm start
 sudo -E npm install pm2 -g
 echo stop all processes
 sudo pm2 kill
