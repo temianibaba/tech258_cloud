@@ -98,7 +98,7 @@ echo done!
 echo start app
 sudo -E npm start
 ```
-2. ``nohup node app.js &`` - runs app in background
+2. ``nohup node app.js &`` - runs app in background (makes it harder to stop)
 3. ``pm2`` - runs app in background as parent process
 ```bash
 sudo npm install pm2 -g
