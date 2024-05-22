@@ -110,7 +110,16 @@ echo start app in background
 pm2 start app.js # (name process)
 echo done!
 ```
+PM2 is much more advanced and it has the PM2-Web interface to manage it.<br>
 
+PM2 does but Forever doesn't:<br>
+
+- Graceful/rolling restarts
+- OS startup script support
+- Remote deploy
+- Multiple deploys/revert
+- Cluster mode
+- Metrics
 ### Errors
 Sometime nginx doesn't work after changing config. If you need to reinstall nginx use:
 ```bash
