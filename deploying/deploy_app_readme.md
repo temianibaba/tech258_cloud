@@ -19,7 +19,7 @@ enable nginx when you start your instance nginx will start too, to test new scri
 #!/bin/bash
 
 # export DB_HOST=mongodb://(db private IP):27017/posts
-export DB_HOST=mongodb://10.0.3.5:27017/posts
+export DB_HOST=mongodb://172.31.32.114:27017/posts
 printenv DB_HOST
 
 echo update
@@ -50,8 +50,8 @@ sudo DEBIAN_FRONTEND=noninteractive git clone https://github.com/temianibaba/tec
 echo done!
 
 echo go to app folder
-# cd /home/ubuntu/tech258-sparta-test-app/app # aws
-cd /tech258-sparta-test-app/app # azure
+cd /home/ubuntu/tech258-sparta-test-app/app # aws
+# cd /tech258-sparta-test-app/app # azure
 echo done!
 
 echo install node js
